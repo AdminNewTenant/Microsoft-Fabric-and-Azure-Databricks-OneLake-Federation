@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "MLExperiment",
+    "displayName": "aisample-superstore-forecast"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "6c537584-39e7-b713-4f2b-b8c09a926296"
+  }
+}
