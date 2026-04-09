@@ -1,0 +1,25 @@
+relationship f5974161-a98d-abca-f012-d1bee5f9e8ee
+	fromColumn: fact_sale.CityKey
+	toColumn: dimension_city.CityKey
+
+relationship 0826bdc0-5810-ca4d-a69b-41eabbcbc925
+	fromColumn: fact_sale.CustomerKey
+	toColumn: dimension_customer.CustomerKey
+
+relationship 4ab8c9f0-7368-6d2a-b25d-e1f21b539122
+	fromColumn: fact_sale.InvoiceDateKey
+	toColumn: dimension_date.Date
+
+relationship 15c4040b-c35d-3f9b-40c6-2fee7f4a9c72
+	isActive: false
+	fromColumn: fact_sale.DeliveryDateKey
+	toColumn: dimension_date.Date
+
+relationship 99a9f077-359f-467c-6bb5-369aadef2d09
+	fromColumn: fact_sale.StockItemKey
+	toColumn: dimension_stock_item.StockItemKey
+
+relationship 1ec7e114-9fc6-e32b-a358-39b77a0875fc
+	fromColumn: fact_sale.SalespersonKey
+	toColumn: dimension_employee.EmployeeKey
+

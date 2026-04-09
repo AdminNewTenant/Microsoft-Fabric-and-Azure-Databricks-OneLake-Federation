@@ -1,0 +1,11 @@
+expression 'DirectLake - WHGold' =
+		let
+		    Source = AzureStorage.DataLake("https://onelake.dfs.fabric.microsoft.com/da027236-504c-4a38-a0c1-e63b3ee79b45/a85d6310-1c1c-4afc-8270-59e466178fdb", [HierarchicalNavigation=true])
+		in
+		    Source
+	lineageTag: a6dd3506-7606-4121-ac1e-993a27de8382
+
+	annotation PBI_IncludeFutureArtifacts = False
+
+	annotation PBI_RemovedChildren = [{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[Medallion]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[Time]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[HackneyLicense]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[Weather]"}},"objectType":"Table"}]
+
