@@ -18,18 +18,18 @@ Git-enabled development lifecycle for all Microsoft Fabric artifacts
 
 ### Architecture Layers
 
-* 1. Data Sources (Multi-Cloud)
+* Data Sources (Multi-Cloud)
 
 This architecture supports heterogeneous operational data sources located across multiple platforms and clouds:
-** SQL Server
-** Oracle
-** Azure SQL Database
-** Cosmos DB
-** On-premises or site-specific OLTP systems
+  * SQL Server
+  * Oracle
+  * Azure SQL Database
+  * Cosmos DB
+  * On-premises or site-specific OLTP systems
 
 These systems remain the systems of record and are accessed without modification to upstream workloads.
 
-* 2. Ingestion Layer
+* Ingestion Layer
 
 Fabric Real-Time Intelligence
 
@@ -42,7 +42,7 @@ Enables near-real-time replication from transactional databases into Fabric
 Provides low-latency ingestion while minimizing impact on source systems
 Data is ingested as-is, without transformation, to preserve raw fidelity.
 
-* 3. Historization Layer (Restricted Access)
+* Historization Layer (Restricted Access)
 
 Acts as a compliance and audit buffer
 Data is retained for traceability and replay purposes
@@ -50,7 +50,7 @@ No direct user access ("No Access")
 Accessible only through controlled pipelines or automated processes
 This layer ensures historical integrity while isolating raw data from analytics users.
 
-* 4. Lakehouse Medallion Layers
+* Lakehouse Medallion Layers
 All transformation and analytical workloads operate within Microsoft Fabric Lakehouses.Bronze Lakehouse (Raw)
 
 Stores ingested data in original format
@@ -67,14 +67,14 @@ Analytics-optimized, business-ready datasets
 Aggregations, KPIs, and dimensional models
 Optimized for BI, AI, and semantic modeling
 
-* 5. Data Processing & Orchestration
+* Data Processing & Orchestration
 Fabric Data Pipelines
 
 Orchestrate ingestion, transformation, and promotion between layers
 Support scheduling, dependency management, and error handling
 Git-versioned for CI/CD and traceability
 
-* 6. Advanced Analytics & Personas
+* Advanced Analytics & Personas
 Data Science (Azure Databricks)
 
 Used by Data Scientists
@@ -87,18 +87,17 @@ Exploratory analytics and complex transformations
 Works primarily with Silver and Gold datasets
 
 Azure Databricks is deliberately isolated from ingestion and historization layers to maintain governance boundaries.
-
-* 7. Data Consumption & AI
-** Power BI
-** Semantic models built on Gold Lakehouse
-** Enterprise reporting and self-service BI
-** Supports Direct Lake where applicable
-** Copilot Studio
-** Conversational analytics and AI assistants
-** Grounded on governed, curated data
-** Microsoft Foundry
-** AI/ML lifecycle management
-** Model deployment and operationalization
+  * Data Consumption & AI
+  * Power BI
+  * Semantic models built on Gold Lakehouse
+  * Enterprise reporting and self-service BI
+  * Supports Direct Lake where applicable
+  * Copilot Studio
+  * Conversational analytics and AI assistants
+  * Grounded on governed, curated data
+  * Microsoft Foundry
+  * AI/ML lifecycle management
+  * Model deployment and operationalization
 
 Support & Governance Services
 These services apply across all layers:
