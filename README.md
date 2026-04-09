@@ -7,7 +7,7 @@
 This document describes the Medallion Architecture implemented on Microsoft Fabric, leveraging OneLake Federation in read-only mode. The architecture is designed for multi-cloud, enterprise-grade analytics, enabling governed data ingestion, scalable data processing, advanced analytics, and business intelligence—while enforcing strong security and compliance controls.
 The solution follows a Bronze / Silver / Gold (Lakehouse) pattern and clearly separates responsibilities across ingestion, historization, data science, analytics, and consumption layers.
 
-<img width="900" height="500" alt="image" src="https://github.com/user-attachments/assets/e1682665-638d-4b27-bd03-da041cd52d9e" />
+<img width="900" height="600" alt="image" src="https://github.com/user-attachments/assets/e1682665-638d-4b27-bd03-da041cd52d9e" />
 
 ### High-Level Design Principles
 
